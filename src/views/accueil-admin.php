@@ -1,7 +1,7 @@
 <h1>Espace d'administration</h1>
 
 
-<h2>Nouvelle compétence</h2>
+<h3>Nouvelle compétence</h3>
 <form method="post" class="form-inline">
     <div class="form-group">
         <input type="text" name="newSkill" class="form-control">
@@ -15,7 +15,7 @@
 <table class="table table-bordered table-striped">
     <tr>
         <th>Compétence</th>
-        <th></th>
+        <th>Action</th>
     </tr>
     <?php $index=0 ?>
     <?php foreach($skills as $item): ?>
