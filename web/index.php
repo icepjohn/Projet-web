@@ -12,6 +12,9 @@ if(isset($_GET["controller"])){
 //(ici le dossier proje-web)
 define("ROOT_PATH", dirname(__DIR__));
 
+//Inclusion des dépendances du projet
+require ROOT_PATH.'/src/framework/mvc.php';
+
 //Définition du chemin du contrôleur
 $controllerPath = ROOT_PATH.'/src/controllers/'. $controllerName.'.php';
 
