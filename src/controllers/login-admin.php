@@ -27,6 +27,9 @@ if($isSubmitted){
 
         if($ok){
            
+           $_SESSION["role"] = "admin";
+           $_SESSION["userName"] = "Administrateur";
+
             //redirection
             header("location:index.php?controller=accueil-admin");
         } else {

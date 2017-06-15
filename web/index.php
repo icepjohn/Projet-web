@@ -1,10 +1,25 @@
 <?php
+//Démarrage de la session
+session_start();
+
 //Récupération du contrôleur
 //avec gestion de la page de défaut
 if(isset($_GET["controller"])){
     $controllerName = $_GET["controller"];
 } else {
     $controllerName = "accueil";
+}
+
+
+//Sécurisation l'accès à l'administration
+session_regenerate_id(true);
+
+$securedRoutes = ['accueil-admin'];
+$role = isset($_SESSION["role"])?$_SESSION["role"]:"";
+//Si on tente d'accèder à une page sécurisée sans s'être identifié au préalable alors la route est modifiée pour afficher le formulaire de login 
+if(in_array($controllerName, $securedRoutes) && $role != "admin"){
+    //$controllerName = "login-admin";
+    header("location:index.php?controller=login-admin");
 }
 
 
