@@ -29,6 +29,7 @@ define("ROOT_PATH", dirname(__DIR__));
 
 //Inclusion des dépendances du projet
 require ROOT_PATH.'/src/framework/mvc.php';
+require ROOT_PATH.'/src/config/config.php';
 
 //Définition du chemin du contrôleur
 $controllerPath = ROOT_PATH.'/src/controllers/'. $controllerName.'.php';
