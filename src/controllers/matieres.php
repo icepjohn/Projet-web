@@ -8,3 +8,7 @@ $listeMatieres = $rs->fetchALL(PDO::FETCH_ASSOC);
 
 //affichage de la vue
 renderView('matieres',['listeMatieres' => $listeMatieres]);
+
+
+    //Redirection pour éviter de reposter les données
+    header("location:index.php?controller=matieres");

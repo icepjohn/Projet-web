@@ -54,6 +54,19 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+<!-- Affichage des massages flash -->
+<?php if(isset($_SESSION["flash"])): ?>
+<div class="row">
+    <div class ="col-md-6 col-md-offset-3 alert alert-info">
+    <?php
+        //Affichage du message
+        echo $_SESSION["flash"];
+        //Suppresion du message
+        unset($_SESSION["flash"]);
+        ?>
+    </div>
+</div>
+<?php endif; ?>
 
     <!-- Contenu de l'application -->
     <section class="row">
