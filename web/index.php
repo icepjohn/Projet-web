@@ -14,12 +14,22 @@ if(isset($_GET["controller"])){
 //Sécurisation l'accès à l'administration
 session_regenerate_id(true);
 
-$securedRoutes = ['accueil-admin'];
+$securedRoutes = [
+    'accueil-admin' => 'ADMIN',
+    'accueil-formateur' => 'FORMATEUR',
+    'accueil-stagiaire' => 'STAGIAIRE'
+
+
+];
 $role = isset($_SESSION["role"])?$_SESSION["role"]:"";
-//Si on tente d'accèder à une page sécurisée sans s'être identifié au préalable alors la route est modifiée pour afficher le formulaire de login 
-if(in_array($controllerName, $securedRoutes) && $role != "admin"){
-    //$controllerName = "login-admin";
-    header("location:index.php?controller=login-admin");
+
+//Si on tente d'accèder à une page sécurisée sans s'être identifié au
+//préalable alors la route est modifiée pour afficher le formulaire de login
+if (array_key_exists($controllerName, $securedRoutes)
+    && $role != $securedRoutes[$controllerName]
+) {
+    $_SESSION["flash"] = "Vous n'avez pas les droits pour accéder à cette page, veuillez vous identifier";
+    header("location:index.php?controller=login");
 }
 
 

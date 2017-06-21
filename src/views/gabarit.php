@@ -29,7 +29,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.php?controller=matieres">liste des matières <span class="sr-only">(current)</span></a></li>
-                    <li><a href="index.php?controller=quiz">Quiz</a></li>
+                    <li class="active"><a href="index.php?controller=quiz">Quiz</a></li>
+                    <li class="active"><a href="index.php?controller=inscription">Inscription</a></li>
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
@@ -37,17 +38,17 @@
                         //récupération du rôle de l'utilisateur
                         $role= isset($_SESSION["role"])?$_SESSION["role"]:""; 
                         //récupération du nom de l'utilisateur
-                        $userName= isset($_SESSION["userName"])?$_SESSION["userName"]:"Invité"; 
+                    $userName = isset($_SESSION["userName"]) ? $_SESSION["userName"] : "Invité";
                     ?>
                     <!-- Dire bonjour à l'utilisateur -->
                     <li class="navbar-text">Bonjour <?=$userName?></li>
 
                     <!-- Affichage du lien connexion/déconnexion -->
-                    <?php if($role == "admin"): ?>
-                        <li><a href="index.php?controller=admin-logout">Déconnexion</a></li>
+                    <?php if ($role): ?>
+                        <li class="active"><a href="index.php?controller=admin-logout">Déconnexion</a></li>
                     <?php else: ?>
                         <li>
-                            <a href="index.php?controller=login-admin">Connexion admin</a>   
+                            <a href="index.php?controller=login">Connexion</a>
                         </li>
                     <?php endif; ?>
                 </ul>
