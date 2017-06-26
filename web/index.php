@@ -30,6 +30,7 @@ if (array_key_exists($controllerName, $securedRoutes)
 ) {
     $_SESSION["flash"] = "Vous n'avez pas les droits pour accéder à cette page, veuillez vous identifier";
     header("location:index.php?controller=login");
+    exit;
 }
 
 
