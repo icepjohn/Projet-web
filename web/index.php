@@ -2,6 +2,17 @@
 //Démarrage de la session
 session_start();
 
+//Définition du dossier racine du projet
+//(ici le dossier proje-web)
+define("ROOT_PATH", dirname(__DIR__));
+
+//Inclusion des dépendances du projet
+require ROOT_PATH.'/src/framework/mvc.php';
+require ROOT_PATH.'/src/config/config.php';
+
+//Enregistrement des fonctions d'autochargement des classes
+spl_autoload_register("autoLoad");
+
 //Récupération du contrôleur
 //avec gestion de la page de défaut
 if(isset($_GET["controller"])){
@@ -18,10 +29,14 @@ $securedRoutes = [
     'accueil-admin' => 'ADMIN',
     'accueil-formateur' => 'FORMATEUR',
     'accueil-stagiaire' => 'STAGIAIRE'
-
-
 ];
-$role = isset($_SESSION["role"])?$_SESSION["role"]:"";
+
+//gestion de l'utilisateur avec la POO
+$user=getUser();
+$role=$user->getRole();
+
+
+//var_dump($user);
 
 //Si on tente d'accèder à une page sécurisée sans s'être identifié au
 //préalable alors la route est modifiée pour afficher le formulaire de login
@@ -32,15 +47,6 @@ if (array_key_exists($controllerName, $securedRoutes)
     header("location:index.php?controller=login");
     exit;
 }
-
-
-//Définition du dossier racine du projet 
-//(ici le dossier proje-web)
-define("ROOT_PATH", dirname(__DIR__));
-
-//Inclusion des dépendances du projet
-require ROOT_PATH.'/src/framework/mvc.php';
-require ROOT_PATH.'/src/config/config.php';
 
 //Définition du chemin du contrôleur
 $controllerPath = ROOT_PATH.'/src/controllers/'. $controllerName.'.php';

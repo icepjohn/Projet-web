@@ -54,3 +54,39 @@ function getPDO(){
     ];
     return new PDO(DSN,DB_USER,DB_PASS, $options); 
 }
+
+
+/**
+ * fonction d'auto chargement des classes
+ * Utilisée par spl_autoload_register
+ * @param $className
+ * @throws Exception
+ */
+function autoLoad ($className){
+    $path=ROOT_PATH."/src/classes/{$className}.php";
+    if(file_exists($path)){
+        require_once $path;
+    }else{
+        throw new Exception("le fichier $path ne peut être chargé");
+    }
+
+}
+
+/**
+ * Retourne l'utilisateur authentifié
+ * @return User
+ */
+function getuser(){
+    if(isset($_SESSION["user"])){
+        $user=unserialize($_SESSION["user"]);
+
+    }else{
+        $user = new User();
+        //Utilisateur par défaut
+        $user->setUserName("Invité");
+        $user->setRole("GUEST");
+        $_SESSION["user"]=serialize($user);
+    }
+
+    return $user;
+}

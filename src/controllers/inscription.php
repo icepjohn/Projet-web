@@ -73,12 +73,12 @@ if ($isSubmitted) {
 
         }//Fin insertion des données
     } catch (PDOException $e) {
-        $_SESSION["flash"] = "Impossible de traiter les données".$e->getMessage();
+        $_SESSION["flash"] = "Impossible de traiter les données" . $e->getMessage();
     }//Fin try catch
 
 }//Fin traitement du formulaire
 
-
+//Affichage de la vue
 renderView(
     "inscription",
     [
