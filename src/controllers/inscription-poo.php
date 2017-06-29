@@ -1,6 +1,7 @@
 <?php
 //Inclusion de la classe
-require_once ROOT_PATH."/src/classes/Inscription.php";
+//require_once ROOT_PATH."/src/classes/Inscription.php";
+use m2i\web\Inscription;
 
 //Instanciation de la classe
 //avec injection des données du formulaire

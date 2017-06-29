@@ -1,0 +1,60 @@
+[2017-06-27 14:40:06.029756] [info] lancement de l'application
+[2017-06-27 14:40:20.733015] [info] lancement de l'application
+[2017-06-27 14:40:21.661907] [info] lancement de l'application
+[2017-06-27 14:40:23.949619] [info] lancement de l'application
+[2017-06-27 14:40:27.317339] [info] lancement de l'application
+[2017-06-27 14:40:27.513978] [info] lancement de l'application
+[2017-06-27 14:40:55.656068] [info] lancement de l'application
+[2017-06-27 14:40:56.375655] [info] lancement de l'application
+[2017-06-27 14:40:57.247503] [info] lancement de l'application
+[2017-06-27 14:40:57.261959] [info] lancement de l'application
+[2017-06-27 14:55:26.974483] [info] lancement de l'application
+[2017-06-27 14:55:28.902375] [info] lancement de l'application
+[2017-06-27 14:55:31.430269] [info] lancement de l'application
+[2017-06-27 14:56:58.906341] [info] lancement de l'application
+[2017-06-27 14:57:07.669605] [info] lancement de l'application
+[2017-06-27 14:57:12.709786] [info] lancement de l'application
+[2017-06-27 14:57:12.836438] [error] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emai' in 'field list'
+    nom: 'azdqsd'
+    prenom: 'azeazdqsd'
+    email: 'azdazd@chelou.fr'
+    mdp: '123'
+    confirmation-mdp: '123'
+    submit: ''
+[2017-06-27 16:31:08.620528] [info] lancement de l'application
+[2017-06-27 16:31:26.363167] [info] lancement de l'application
+[2017-06-27 16:31:36.906769] [info] lancement de l'application
+[2017-06-27 16:31:38.913630] [info] lancement de l'application
+[2017-06-27 16:31:40.089890] [info] lancement de l'application
+[2017-06-27 16:31:41.729767] [info] lancement de l'application
+[2017-06-27 16:31:43.313643] [info] lancement de l'application
+[2017-06-27 16:31:43.977509] [info] lancement de l'application
+[2017-06-27 16:31:44.433656] [info] lancement de l'application
+[2017-06-27 16:31:45.305617] [info] lancement de l'application
+[2017-06-27 16:33:20.314913] [info] lancement de l'application
+[2017-06-27 16:33:35.481762] [info] lancement de l'application
+[2017-06-27 16:33:40.441255] [info] lancement de l'application
+[2017-06-27 16:34:26.011157] [info] lancement de l'application
+[2017-06-27 16:36:42.090863] [info] lancement de l'application
+[2017-06-27 16:36:46.216449] [info] lancement de l'application
+[2017-06-27 16:37:29.601293] [info] lancement de l'application
+[2017-06-27 16:37:42.714896] [info] lancement de l'application
+[2017-06-27 16:38:05.201081] [info] lancement de l'application
+[2017-06-27 16:41:13.994980] [info] lancement de l'application
+[2017-06-27 16:41:18.840276] [info] lancement de l'application
+[2017-06-27 16:41:19.031903] [info] lancement de l'application
+[2017-06-27 16:41:23.290867] [info] lancement de l'application
+[2017-06-27 16:41:27.499349] [info] lancement de l'application
+[2017-06-27 16:41:57.242481] [info] lancement de l'application
+[2017-06-27 16:44:19.315501] [info] lancement de l'application
+[2017-06-27 16:44:58.440751] [info] lancement de l'application
+[2017-06-27 16:49:38.563666] [info] lancement de l'application
+[2017-06-27 16:50:31.065488] [info] lancement de l'application
+[2017-06-27 16:51:30.520939] [info] lancement de l'application
+[2017-06-27 16:51:41.642010] [info] lancement de l'application
+[2017-06-27 16:54:06.858016] [info] lancement de l'application
+[2017-06-27 16:54:08.512979] [info] lancement de l'application
+[2017-06-27 16:54:11.288939] [info] lancement de l'application
+[2017-06-27 16:54:25.745306] [info] lancement de l'application
+[2017-06-27 16:55:14.745322] [info] lancement de l'application
+[2017-06-27 16:56:31.074213] [info] lancement de l'application

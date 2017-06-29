@@ -1,5 +1,5 @@
 <?php
-
+namespace m2i\web;
 /**
  * Created by PhpStorm.
  * User: Administrateur
@@ -83,7 +83,7 @@ class User
      * Chargement des données utilisateur
      * depuis la base de données (hydratation)
      */
-    public function loadUser(PDO $pdo, $email, $password)
+    public function loadUser(\PDO $pdo, $email, $password)
     {
         $rs = false;
         if (!empty($email) && !empty($password)) {
@@ -94,7 +94,7 @@ class User
         WHERE u.email=? AND u.mot_de_passe=?";
             $stm = $pdo->prepare($sql);
             $stm->execute([$email, sha1($password)]);
-            $rs = $stm->fetch(PDO::FETCH_ASSOC);
+            $rs = $stm->fetch(\PDO::FETCH_ASSOC);
 
 
             //hydratation de l'objet
@@ -137,7 +137,7 @@ class User
         WHERE u.personne_id=?";
         $stm = $pdo->prepare($sql);
         $stm->execute([$this->id]);
-        $rs = $stm->fetch(PDO::FETCH_ASSOC);
+        $rs = $stm->fetch(\PDO::FETCH_ASSOC);
 
 
         //hydratation de l'objet

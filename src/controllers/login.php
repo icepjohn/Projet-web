@@ -1,4 +1,5 @@
 <?php
+use m2i\web\User;
 
 //Initialisation du tableau des erreurs
 $errors = [];

@@ -1,4 +1,5 @@
 <?php
+use m2i\web\User;
 
 /**
 @param string $view : Le nom de la vue
@@ -62,7 +63,7 @@ function getPDO(){
  * @param $className
  * @throws Exception
  */
-function autoLoad ($className){
+function autoLoader ($className){
     $path=ROOT_PATH."/src/classes/{$className}.php";
     if(file_exists($path)){
         require_once $path;
@@ -76,7 +77,7 @@ function autoLoad ($className){
  * Retourne l'utilisateur authentifié
  * @return User
  */
-function getuser(){
+function getUser(){
     if(isset($_SESSION["user"])){
         $user=unserialize($_SESSION["user"]);
 

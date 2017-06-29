@@ -1,4 +1,5 @@
 <?php
+namespace m2i\web;
 
 /**
  *
